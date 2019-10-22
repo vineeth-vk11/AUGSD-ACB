@@ -1,0 +1,53 @@
+{% extends "details/base.html" %}
+{% block title %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'details/scores.css' %}" >
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <center>
+        <table class="table table-bordered">
+            <tr>
+                <td>Student Name</td>
+                <td>{{ user.username }}</td>
+            </tr>
+
+            <tr>
+                <td>Student Email</td>
+                <td>{{ user.profile.student_email }}</td>
+            </tr>
+
+            <tr>
+                <td>Father Email</td>
+                <td>{{ user.profile.father_email }}</td>
+            </tr>
+
+            <tr>
+                <td>Mother Email</td>
+                <td>{{ user.profile.mother_email }}</td>
+            </tr>
+
+            <tr>
+                <td>Student Contact</td>
+                <td>{{ user.profile.student_contact }}</td>
+            </tr>
+
+            <tr>
+                <td>Father Contact</td>
+                <td>{{ user.profile.father_contact }}</td>
+            </tr>
+
+            <tr>
+                <td>Mother Contact</td>
+                <td>{{ user.profile.mother_contact }}</td>
+            </tr>
+
+            <tr>
+                <td>Address</td>
+                <td>{{ user.profile.address }}</td>
+            </tr>
+        </table>
+    </center>
+</div>
+{% endblock %}

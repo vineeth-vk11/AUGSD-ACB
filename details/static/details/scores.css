@@ -1,0 +1,9 @@
+.table-bordered {
+    border: 2px solid #212529;
+}
+
+tbody {
+    display: table-row-group;
+    vertical-align: middle;
+    border-color: black;
+}

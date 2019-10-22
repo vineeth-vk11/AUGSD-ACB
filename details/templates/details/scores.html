@@ -1,0 +1,35 @@
+{% extends "details/base.html" %}
+
+
+{% block title %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'details/scores.css' %}" >
+{% endblock %}
+
+{% block content %}
+<div class="container">
+<center>
+            <table class="table table-bordered">
+               <thead class="">
+                  <tr>
+                     <th>Subject</th>
+                     <th>Midsem Score</th>
+                     <th>Midsem Grade</th>
+                     <th>Attendance</th>
+                  </tr>
+               </thead>
+
+               {% for score in scores %}
+               <tbody class="tbody">
+               <td>{{ score.subject_name }}</td>
+               <td>{{ score.midsem_score }}</td>
+               <td>{{ score.midsem_grade }}</td>
+               <td>{{ score.attendance }}</td>
+               </tbody>
+
+               {% endfor %}
+            </table>
+</center>
+   </div>
+
+{% endblock %}
